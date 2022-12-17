@@ -26,6 +26,18 @@ prefix
 
 
 ##Combining Operators
-
+prepend
+append
+switchToLatest
+merge
+combineLatest
+zip
 
 ##Sequence Operators
+min and max
+first and last
+output
+count
+contains
+allSatisfy
+reduce
