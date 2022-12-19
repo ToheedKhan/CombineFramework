@@ -1,5 +1,12 @@
 import UIKit
+/*
+ some time, you want a little bit more details as just by using
+ the print is not going to solve your problems.
+ Eg. if you are doing some sort of a network request and you see that the network is not going through.
+ So how do you handle those kind of scenarios?
+ Let's go ahead and take a look at by using action on events.
 
+ */
 /*
  Sometime when We are performing asynchronous operation.
  Most commonly we are retrieving or doing some sort of a network operation, and sometimes it fails and
