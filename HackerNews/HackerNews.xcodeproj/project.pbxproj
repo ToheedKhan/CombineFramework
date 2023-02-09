@@ -12,6 +12,7 @@
 		8A05851029953036006141A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A05850F29953036006141A7 /* Assets.xcassets */; };
 		8A05851329953036006141A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A05851229953036006141A7 /* Preview Assets.xcassets */; };
 		8A05851B29953096006141A7 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05851A29953096006141A7 /* Webservice.swift */; };
+		8A05851E29953348006141A7 /* StoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05851D29953348006141A7 /* StoryListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8A05850F29953036006141A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A05851229953036006141A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A05851A29953096006141A7 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		8A05851D29953348006141A7 /* StoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		8A05850A29953035006141A7 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				8A05851C29953332006141A7 /* View Models */,
 				8A0585192995307B006141A7 /* Services */,
 				8A05850B29953035006141A7 /* HackerNewsApp.swift */,
 				8A05850D29953035006141A7 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				8A05851A29953096006141A7 /* Webservice.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8A05851C29953332006141A7 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A05851D29953348006141A7 /* StoryListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A05851E29953348006141A7 /* StoryListViewModel.swift in Sources */,
 				8A05850E29953035006141A7 /* ContentView.swift in Sources */,
 				8A05850C29953035006141A7 /* HackerNewsApp.swift in Sources */,
 				8A05851B29953096006141A7 /* Webservice.swift in Sources */,

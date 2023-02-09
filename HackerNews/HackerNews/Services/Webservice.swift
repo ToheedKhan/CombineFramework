@@ -10,9 +10,9 @@ import Combine
 
 class Webservice {
     
-    func getStoryById(storyId: Int) -> AnyPublisher<[Int], Error> {
+    func getAllTopStories() -> AnyPublisher<[Int], Error> {
         
-        guard let url = URL(string: "https://hacker-news.firebaseio.com/v0/item/\(storyId).json?print=pretty") else {
+        guard let url = URL(string: "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty") else {
             fatalError("Invalid URL")
         }
         
