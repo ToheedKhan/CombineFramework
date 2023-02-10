@@ -15,8 +15,9 @@ class StoryDetailViewModel: ObservableObject {
     private var cancellable: AnyCancellable?
     
     @Published private var story = Story.placeholder()
-    
+    //So many requests because it is being called form StoryListView
     init(storyId: Int) {
+        print("About to make network request.....")
         self.storyId = storyId
         self.cancellable = Webservice().getStoryById(storyId: storyId)
             .catch { _ in Just(Story.placeholder()) }
