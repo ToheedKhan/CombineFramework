@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct HackerNewsApp: App {
     var body: some Scene {
+//        let storyListView = StoryListView()
         WindowGroup {
-            ContentView()
+//            ContentView()
+            StoryListView()
         }
     }
 }
