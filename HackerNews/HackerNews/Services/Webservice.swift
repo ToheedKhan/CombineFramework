@@ -20,7 +20,7 @@ class Webservice {
             .receive(on: RunLoop.main)
             .map(\.data) //Key value coding
             .decode(type: Story.self, decoder: JSONDecoder())
-            .catch { _ in Empty<Story, Error>() }
+//            .catch { _ in Empty<Story, Error>() } //This should be done at client side
             .eraseToAnyPublisher()
     }
     

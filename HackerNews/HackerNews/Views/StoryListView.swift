@@ -19,7 +19,7 @@ struct StoryListView: View {
     
     init() {
             // this is not the same as manipulating the proxy directly
-            let appearance = UINavigationBarAppearance()
+//            let appearance = UINavigationBarAppearance()
         
 //        appearance.backgroundColor = UIColor(displayP3Red: 255/255, green: 102/255, blue: 0/255, alpha: 1.0)
 //
@@ -58,7 +58,6 @@ struct StoryListView: View {
     
     var body: some View {
         
-//        NavigationView {
         NavigationStack {
           
 //            ZStack {
@@ -68,7 +67,9 @@ struct StoryListView: View {
 //                        }
             List (self.storyListVM.stories, id: \.id) {
                 storyVM in
-                Text("\(storyVM.id)")
+                NavigationLink(destination: StoryDetailView(storyId: storyVM.id)) {
+                    Text("\(storyVM.id)")
+                }
             }
             .navigationTitle("Hacker News")
             .toolbarBackground(.visible, for: .navigationBar)
@@ -83,6 +84,19 @@ struct StoryListView: View {
 
 //            .navigationBarTitle("HackerNews")
         }
+        
+        /*
+         NavigationView {
+             
+             List(self.storyListVM.stories, id: \.id) { storyVM in
+                 NavigationLink(destination: StoryDetailView(storyId: storyVM.id)) {
+                     Text("\(storyVM.title)")
+                 }
+             }
+             
+         .navigationBarTitle("Hacker News")
+         }
+         */
     }
 }
 
