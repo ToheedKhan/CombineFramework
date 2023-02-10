@@ -27,7 +27,7 @@ class StoryListViewModel: ObservableObject {
     private func fetchTopStories() {
         
         self.cancellable = Webservice().getAllTopStories().map { storieIds in
-            storieIds.map { StoryViewModel(id: $0) }
+            storieIds.map { StoryViewModel(story: $0) }
         }.sink(receiveCompletion: { _ in }, receiveValue: { storyViewModels in
             /*
              Whenever we said stories, it's going to go ahead and trigger a publish event, which is eventually going
@@ -41,5 +41,18 @@ class StoryListViewModel: ObservableObject {
 
 struct StoryViewModel {
     
-    let id: Int
+    let story: Story
+    
+    var id: Int {
+        return self.story.id
+    }
+    
+    var title: String {
+        return self.story.title
+    }
+    
+    var url: String {
+        return self.story.url
+    }
+    
 }
