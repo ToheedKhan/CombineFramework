@@ -14,7 +14,8 @@ struct StoryDetailView: View {
     
     init(storyId: Int) {
         self.storyId = storyId
-        self.storyDetailVM = StoryDetailViewModel(storyId: storyId)
+//        self.storyDetailVM = StoryDetailViewModel(storyId: storyId)
+        self.storyDetailVM = StoryDetailViewModel()
     }
     
     var body: some View {
@@ -22,6 +23,8 @@ struct StoryDetailView: View {
             Text(self.storyDetailVM.title)
             
             Webview(url: self.storyDetailVM.url)
+        }.onAppear {
+            self.storyDetailVM.fetchStoryDetails(storyId: self.storyId)
         }
     }
 }
